@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Divya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Homepage</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Btech Student</p>
+                <h1>Hi, I'm <span> Divya Gaddam</span></h1>
+                <h5>I'm pursuing Btech in the domain of Artificial Intelligence<br> and Data Science. This is my portfolio website to show all details<br>about me.</h5>
+            </div>
+        </div>
+    </div>
+   <!-----------about----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> I am an outgoing and dedicated graduate. I bring a 
+                        strong academic foundation and a proactive approach 
+                        to problem-solving. I am committed to learning quickly 
+                        and contributing to Innovative projects. Seeking an 
+                        opportunity to apply my skills and gain valuable experience.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div> 
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HARD SKILLS</span><br>Python Programming<br>Web development - Basics of HTML,CSS,JS</li>
+                                <li><span>SOFT SKILLS</span><br>Communication<br>Problem-solving<br>Adaptability<br>Creativity</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021-present</span><br>Btech at Sree Venkateswara College of Engineering,Nellore.</li>
+                                <li><span>2019-21</span><br>+2 from St. Mary's junior College,Buchireddypalem</li>
+                                <li><span>passed out-2019</span><br>10th from ITI Central School,Bangalore</li>
+                            </ul>
+                        </div>
+            
+                </div>
+
+        
+            </div>
+        </div>
+    </div>
+<!--------------portfolio------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/work1.jpg">
+                <div class="layer">
+                    <h3>Stock Price Prediction</h3>
+                    <p>This project says that stock price prediction using machine learning is the process of predicting the future value of a
+                    stock traded on a stock exchange for reaping profits.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work2.png">
+                <div class="layer">
+                    <h3>Face detection</h3>
+                    <p>This method is based on deep nueral network that is trained to recognize faces by being fed a large dataset of images of faces.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work3.jpg">
+                <div class="layer">
+                     <h3>Cancer Prediction</h3>
+                    <p>ML algorithms helps a lot to take decisions and to perform diagnosis from the data collected by the medical field.</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!----------contact---------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>contact@example.com</p>
+                <p>0123456789</p>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
+</body>
+</html>
